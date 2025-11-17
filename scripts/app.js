@@ -40,10 +40,7 @@ backgroundWhiteButton.addEventListener("click", () => {
 
 //Button 4: Change the font size button  COME BACK TO THIS TO ADD A REVERT BACK TO NORMAL FONT SIZE
 changeFontSize.addEventListener("click", () => {
-    if(pageTitle.fontSize === "32px")
-    {
-        document.body.style.fontSize = "60px";
-    }
+    document.body.style.fontSize = "60px";
 });
 
 //Button 5: Add an image button
@@ -51,6 +48,7 @@ function insertImage(){
     const image = document.createElement("img");
     image.src = "../assets/doxie1.jpg";
     image.alt = "image of skittles";
+    image.id = "skittles";
     imageContainer.appendChild(image);
 }
 addImageButton.addEventListener("click", () => {
@@ -88,9 +86,14 @@ addShadowButton.addEventListener("click", () => {
 });
 
 //Button 12: Apply CSS to image button
+//Create a function that will apply the css to the image
 function applyCSSImage(){
-    image.className = "imgResizing";
+    //this will target the image since we assigned it the id 'skittles' on line 54
+    const imageWithCSS = document.getElementById("skittles");
+    //Now we target the image and assign it the css class we have in our styles.css
+    imageWithCSS.className = "imgResizing";
 };
 imageCSSButton.addEventListener("click", () => {
+    //We then will call(invoke) the function we made and attach it to the button.
     applyCSSImage();
 });
