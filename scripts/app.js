@@ -2,7 +2,7 @@ const pageTitle = document.getElementById("page-title");
 const subTitle = document.getElementById("subtitle");
 const changeTitleButton = document.getElementById("change-title-button");
 const backgroundColorButton = document.getElementById("color-button");
-const backgroundWhiteButton = document.getElementById("back-to-white-button");
+const backgroundRevertButton = document.getElementById("back-to-normal-button");
 const changeFontSize = document.getElementById("change-font-size");
 const addImageButton = document.getElementById("add-image");
 const imageCSSButton = document.getElementById("add-css-to-image");
@@ -34,8 +34,8 @@ backgroundColorButton.addEventListener("click", () => {
 });
 
 //Button 3: Change background color back to white
-backgroundWhiteButton.addEventListener("click", () => {
-    document.body.style.background = "#ffffffff";
+backgroundRevertButton.addEventListener("click", () => {
+    document.body.style.background = "#F5F5DC";
 });
 
 //Button 4: Change the font size button  COME BACK TO THIS TO ADD A REVERT BACK TO NORMAL FONT SIZE
